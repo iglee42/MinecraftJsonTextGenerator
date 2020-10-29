@@ -1,13 +1,10 @@
 package fr.iglee42.minecraftjsontextgenerator;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
+	public static AppFrame frame;
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	frame = new AppFrame();
     }
 }
