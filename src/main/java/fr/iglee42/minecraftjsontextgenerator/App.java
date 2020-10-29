@@ -12,10 +12,12 @@ public class App
 	public static void translate(String enter, String caraC, JTextField result) {
 		
 		String[] part = enter.split(caraC);
-		String resText = "{\"text\":\""+part[1].substring(1) +"\",\"color\":\""+ McColor.getByCode(""+part[1].charAt(0)).getJsonName()+"\"}";
-		result.setText(resText);
-		System.out.println(McColor.getByCode(""+part[1].charAt(0)).getJsonName());
-		result.setVisible(true);
+		StringBuilder build = new StringBuilder();
+		for (String p : part) {
+			String pNoC = p.substring(1);
+			build.append("{\"text\":\" " + pNoC + "\",\"color\":\" \"},");
+			
+		}
 	}
 } 
 enum McColor
