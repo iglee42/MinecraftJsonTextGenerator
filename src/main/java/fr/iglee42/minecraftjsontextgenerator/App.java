@@ -1,6 +1,6 @@
 package fr.iglee42.minecraftjsontextgenerator;
 
-import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class App 
 {
@@ -9,7 +9,8 @@ public class App
     {
     	frame = new AppFrame();
     }
-	public static void translate(String enter, String caraC, JLabel result) {
+	public static void translate(String enter, String caraC, JTextField result) {
+		
 		
 		
 		result.setText(enter);
