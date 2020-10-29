@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 
 public class AppFrame extends JFrame {
 	public AppFrame() {
-		this.setSize(950, 600);
+		this.setSize(950, 300);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		JPanel p = new AppPanel();
 		this.setContentPane(p);
