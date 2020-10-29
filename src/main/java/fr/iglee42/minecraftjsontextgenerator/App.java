@@ -11,9 +11,56 @@ public class App
     }
 	public static void translate(String enter, String caraC, JTextField result) {
 		
-		
-		
-		result.setText(enter);
+		String[] part = enter.split(caraC);
+		String resText = "{\"text\":\""+part[1].substring(1) +"\",\"color\":\""+ McColor.getByCode(""+part[1].charAt(0)).getJsonName()+"\"}";
+		result.setText(resText);
+		System.out.println(McColor.getByCode(""+part[1].charAt(0)).getJsonName());
 		result.setVisible(true);
+	}
+} 
+enum McColor
+{
+	BLACK("black", "0"),
+	DARK_BLUE("dark_blue", "1"),
+	DARK_GREEN("dark_green", "2"),
+	DARK_AQUA("dark_aqua", "3"),
+	DARK_RED("dark_red", "4"),
+	DARK_PURPLE("dark_purple", "5"),
+	GOLD("gold", "6"),
+	GRAY("gray", "7"),
+	DARK_GRAY("dark_gray", "8"),
+	BLUE("blue", "9"),
+	GREEN("green", "a"),
+	AQUA("aqua", "b"),
+	RED("red","c"),
+	LIGHT_PURPLE("light_purple", "d"),
+	YELLOW("yellow", "e"),
+	WHITE("white", "f");
+
+
+	
+	
+	private String jsonName,code;
+	
+	private McColor(String jName, String c) {
+		this.jsonName = jName;
+		this.code = c;
+	}
+
+	public String getJsonName() {
+		return jsonName;
+	}
+
+	public String getCode() {
+		return code;
+	}
+	
+	public static McColor getByCode(String code) {
+		for (McColor c : values()) {
+			if (c.getCode().equalsIgnoreCase(code)) {
+				return c;
+			}
+		}
+		return WHITE;
 	}
 }

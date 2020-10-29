@@ -41,10 +41,6 @@ public class AppPanel extends JPanel {
 			public void keyTyped(KeyEvent e) {
 				e.consume();
 			}
-			@Override
-			public void keyPressed(KeyEvent e) {
-				e.consume();
-			}
 		});
 		result.setVisible(false);
 		this.add(result);
