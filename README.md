@@ -26,6 +26,6 @@ Le resultat en jeu est parfait
 
 Merci de l'utiliser 
 
-Si vous voulez m'aider à l'améliorer faites lemoi savoir sur discord : iglée42#5485
+Si vous voulez m'aider à l'améliorer faites le moi savoir sur discord : iglée42#5485
 
 Lien de téléchargement : à venir
